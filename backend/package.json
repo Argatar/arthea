@@ -1,0 +1,35 @@
+{
+  "name": "arthea-backend",
+  "version": "1.0.0",
+  "description": "Arthea - Backend API dla zarządzania wizualizacjami",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "db:migrate": "node modules/communication/db/migrations.js",
+    "db:reset": "rm -f data/arthea.db && npm run db:migrate"
+  },
+  "keywords": ["arthea", "architecture", "visualization"],
+  "author": "Arthea Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "better-sqlite3": "^9.2.2",
+    "jsonwebtoken": "^9.0.2",
+    "bcryptjs": "^2.4.3",
+    "uuid": "^9.0.1",
+    "compression": "^1.7.4",
+    "@aws-sdk/client-s3": "^3.478.0",
+    "nodemailer": "^6.9.7",
+    "helmet": "^7.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
